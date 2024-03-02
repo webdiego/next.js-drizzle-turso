@@ -7,11 +7,11 @@ import { revalidatePath } from "next/cache";
 export async function addNoteAction(formData: FormData) {
   const rawFormData = {
     title: formData.get("title") as string,
-    description: formData.get("description") as string,
+    content: formData.get("content") as string,
   };
 
-  if (!rawFormData.title || !rawFormData.description) {
-    throw new Error("Title and description are required");
+  if (!rawFormData.title || !rawFormData.content) {
+    throw new Error("Title and content are required");
   }
   const newNote = await db.insert(notes).values(rawFormData);
 
