@@ -9,8 +9,14 @@ export default async function Home() {
   const allNotes = await db.select().from(notes).all();
 
   return (
-    <div className="max-w-md mx-auto py-10">
-      <div className="flex  items-center justify-center space-x-2 py-2">
+    <div className="max-w-md mx-auto py-10 ">
+      <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1] mt-24">
+        Template Next.js + Drizzle + Turso + Shadcn
+      </h1>
+      <p className="max-w-[750px] text-center text-lg text-muted-foreground ">
+        It includes a simple CRUD app for notes using server actions.
+      </p>
+      {/* <div className="flex  items-center justify-center space-x-2 py-2">
         <Image
           src="/drizzle.png"
           alt="logo"
@@ -32,7 +38,7 @@ export default async function Home() {
           height={100}
           className="rounded-lg"
         />
-      </div>
+      </div> */}
       <Form />
       <Notes notes={allNotes} />
     </div>

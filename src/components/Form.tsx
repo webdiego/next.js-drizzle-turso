@@ -9,8 +9,8 @@ export default function Form() {
     ref.current?.reset();
   };
   return (
-    <div className="bg-slate-200 p-2 rounded-lg ">
-      <h1 className="text-base font-semibold leading-7 text-gray-900">
+    <div className="bg-slate-200 px-4 py-6 rounded-lg mt-5 ring-1 ring-inset ring-slate-300">
+      <h1 className="text-lg font-semibold leading-7 text-gray-900">
         Add Note
       </h1>
       <form action={onSubmitHandler} ref={ref}>

@@ -19,7 +19,10 @@ export default function Notes({ notes }: { notes: NoteProps[] }) {
               new Date(a.created_at).getTime()
           )
           .map((note) => (
-            <div key={note.id} className="bg-slate-100 rounded-lg p-2">
+            <div
+              key={note.id}
+              className="bg-slate-100 rounded-lg p-2 ring-1 ring-inset ring-gray-200 "
+            >
               <div className="flex space-x-3">
                 <h1 className="block text-sm font-medium leading-6 text-gray-900">
                   Title:
