@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg {
+  background-image: "/bg.webp";
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .bg-pattern {
   background-color: #e5e5f7;
   opacity: 0.1;
