@@ -19,8 +19,8 @@ export default async function Home() {
         <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1] ">
           Template Next.js + Drizzle + Turso + Shadcn
         </h1>
-        <p className="max-w-[750px] text-center text-lg text-muted-foreground ">
-          It includes a simple CRUD app for notes using server actions.
+        <p className="text-center  mt-2">
+          This is a template for building a fullstack web application.
         </p>
         {/* <div className="flex  items-center justify-center space-x-2 py-2">
         <Image
