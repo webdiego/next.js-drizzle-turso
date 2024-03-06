@@ -9,7 +9,7 @@ export default async function Home() {
   const allNotes = await db.select().from(notes).all();
 
   return (
-    <div className="max-w-md mx-auto py-10 ">
+    <div className="max-w-md py-10 mx-4 sm:mx-auto ">
       <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1] mt-24">
         Template Next.js + Drizzle + Turso + Shadcn
       </h1>
