@@ -1,7 +1,5 @@
 import { db } from "../db/index";
 import { notes } from "../db/schema/notes";
-import { Button } from "@/components/ui/button";
-import { addNoteAction } from "./actions/addNoteAction";
 import Notes from "@/components/Notes";
 import Form from "@/components/Form";
 import Image from "next/image";
@@ -12,7 +10,13 @@ export default async function Home() {
     <div className="relative flex items-center h-screen ">
       <div className="bg-pattern absolute top-0 left-0 w-full h-screen -z-10" />
       <div className="fixed top-0 left-0 w-screen h-screen">
-        <Image src="/bg.webp" alt="background" quality="100" layout="fill" />
+        <Image
+          src="/bg.webp"
+          alt="background"
+          quality="100"
+          layout="fill"
+          priority
+        />
       </div>
       <div className="relative max-w-md py-10 px-6 mx-4 sm:mx-auto backdrop-blur-[1px] rounded-3xl">
         <div className="absolute top-0 left-0 w-full h-full -z-10 rounded-7xl opacity-50 " />
@@ -22,29 +26,6 @@ export default async function Home() {
         <p className="text-center  mt-2">
           This is a template for building a fullstack web application.
         </p>
-        {/* <div className="flex  items-center justify-center space-x-2 py-2">
-        <Image
-          src="/drizzle.png"
-          alt="logo"
-          width={100}
-          height={100}
-          className="rounded-lg"
-        />
-        <Image
-          src="/turso.png"
-          alt="logo"
-          width={100}
-          height={100}
-          className="rounded-lg"
-        />
-        <Image
-          src="/shadcn.png"
-          alt="logo"
-          width={100}
-          height={100}
-          className="rounded-lg"
-        />
-      </div> */}
         <Form />
         <Notes notes={allNotes} />
       </div>
