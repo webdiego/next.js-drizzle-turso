@@ -1,7 +1,8 @@
 "use client";
-import { Button } from "./ui/button";
 import { addNoteAction } from "../app/actions/addNoteAction";
 import { useRef } from "react";
+import ButtonSubmit from "./ButtonSubmit";
+
 export default function Form() {
   const ref = useRef<HTMLFormElement>(null);
   const onSubmitHandler = (formData: FormData) => {
@@ -24,6 +25,7 @@ export default function Form() {
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           type="text"
           name="title"
+          required
         />
         <label
           className="block text-sm font-medium leading-6 text-gray-900"
@@ -35,10 +37,9 @@ export default function Form() {
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           type="text"
           name="content"
+          required
         />
-        <Button type="submit" className="w-full mt-2 ">
-          Add Note
-        </Button>
+        <ButtonSubmit />
       </form>
     </div>
   );
