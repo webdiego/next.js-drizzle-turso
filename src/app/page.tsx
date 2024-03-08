@@ -18,7 +18,9 @@ export default async function Home() {
           src="/bg.webp"
           alt="background"
           quality="100"
-          layout="fill"
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover"
           priority
         />
       </div>
