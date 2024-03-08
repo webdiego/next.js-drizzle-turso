@@ -3,9 +3,13 @@ import { notes } from "../db/schema/notes";
 import Notes from "@/components/Notes";
 import Form from "@/components/Form";
 import Image from "next/image";
+import { CopyToClipboard } from "@/components/CopyToClipboard";
+import { Button } from "@/components/ui/button";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
 export default async function Home() {
   const allNotes = await db.select().from(notes).all();
-
+  const githubUrl = "https://github.com/webdiego/drizzle-turso.git";
   return (
     <div className="relative flex items-center h-screen ">
       <div className="bg-pattern absolute top-0 left-0 w-full h-screen -z-10" />
@@ -26,6 +30,19 @@ export default async function Home() {
         <p className="text-center  mt-2">
           This is a template for building a fullstack web application.
         </p>
+        <div className="my-10">
+          <div className="mx-auto ">
+            <CopyToClipboard text={"git clone " + githubUrl} />
+          </div>
+          <div className="flex items-center justify-center">
+            <Button size="default" asChild className="self-center mt-2">
+              <a href={githubUrl}>
+                <GitHubLogoIcon className="mr-1 h-5 w-5" />
+                GitHub
+              </a>
+            </Button>
+          </div>
+        </div>
         <Form />
         <Notes notes={allNotes} />
       </div>
