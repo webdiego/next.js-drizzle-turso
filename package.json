@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "db:push": "drizzle-kit push:sqlite",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:studio": "drizzle-kit studio",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
