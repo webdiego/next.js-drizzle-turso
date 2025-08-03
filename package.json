@@ -5,6 +5,7 @@
   "scripts": {
     "db:push": "drizzle-kit push:sqlite",
     "db:generate": "drizzle-kit generate:sqlite",
+    "db:migrate": "tsx src/db/migrate",
     "db:studio": "drizzle-kit studio",
     "dev": "next dev",
     "build": "next build",

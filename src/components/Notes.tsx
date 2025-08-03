@@ -9,6 +9,7 @@ type NoteProps = {
 };
 
 export default function Notes({ notes }: { notes: NoteProps[] }) {
+  const formatter = new Intl.DateTimeFormat("en-GB", { dateStyle: "short" });
   return (
     <div className="space-y-2 mt-2">
       {notes &&
@@ -44,7 +45,8 @@ export default function Notes({ notes }: { notes: NoteProps[] }) {
                   Created at:
                 </h1>
                 <p className="block text-sm leading-6 text-gray-900">
-                  {note.created_at}
+                  {" "}
+                  {formatter.format(new Date(note.created_at))}
                 </p>
               </div>
 
